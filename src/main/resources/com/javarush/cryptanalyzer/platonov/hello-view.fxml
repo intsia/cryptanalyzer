@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javarush.cryptanalyzer.platonov.Controller">
+   <bottom>
+      <AnchorPane prefHeight="172.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="button" layoutX="934.0" layoutY="74.0" mnemonicParsing="false" text="Button" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="scrollPane">
+               <children>
+                  <TextFlow prefWidth="1000.0" style="-fx-border-color: #222020; -fx-border-radius: 5;">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Привет. Меня зовут #%$%^@*()#!\nНе парьтесь, просто мой создатель придурок и он решил, что всех роботов так зовут.Однако, тем не менее я действительно робот, хоть и не слишком талантливый по современным меркам.На самом деле, я первая программа которую написал мой создатель. Охотно принимаю ваши соболезнования по этому поводу.">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextFlow>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="163.0" prefWidth="1920.0">
+               <children>
+                  <AnchorPane prefHeight="123.0" prefWidth="594.0" />
+                  <AnchorPane prefHeight="123.0" prefWidth="663.0" />
+                  <AnchorPane prefHeight="123.0" prefWidth="741.0" />
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="117.0" prefWidth="1920.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>
