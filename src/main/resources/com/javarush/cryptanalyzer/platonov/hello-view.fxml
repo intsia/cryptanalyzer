@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -19,18 +20,12 @@
          </children>
       </AnchorPane>
    </bottom>
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </left>
-   <right>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
-   </right>
    <center>
       <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <content>
             <VBox fx:id="scrollPane">
                <children>
-                  <TextFlow prefWidth="1000.0" style="-fx-border-color: #222020; -fx-border-radius: 5;">
+                  <TextFlow prefWidth="1000.0" style="-fx-border-color: #222020; -fx-border-radius: 5;" textAlignment="CENTER">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Привет. Меня зовут #%$%^@*()#!\nНе парьтесь, просто мой создатель придурок и он решил, что всех роботов так зовут.Однако, тем не менее я действительно робот, хоть и не слишком талантливый по современным меркам.На самом деле, я первая программа которую написал мой создатель. Охотно принимаю ваши соболезнования по этому поводу.">
                            <font>
@@ -64,4 +59,86 @@
          </children>
       </VBox>
    </top>
+   <right>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="200.0" prefWidth="5.0" />
+            <VBox>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="5.0" />
+            <VBox>
+               <children>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                     <center>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </children>
+            </VBox>
+            <Pane prefHeight="200.0" prefWidth="5.0" />
+         </children>
+      </HBox>
+   </right>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextFlow maxHeight="50.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;" textAlignment="CENTER">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Contacts" textAlignment="CENTER">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+         </children>
+      </VBox>
+   </left>
 </BorderPane>
