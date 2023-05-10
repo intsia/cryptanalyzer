@@ -1,4 +1,4 @@
-package main;
+package com.javarush.cryptanalyzer.platonov;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
 

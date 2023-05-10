@@ -13,4 +13,6 @@ module com.javarush.cryptanalyzer.platonov.cryptanalyzer {
 
     opens com.javarush.cryptanalyzer.platonov to javafx.fxml;
     exports com.javarush.cryptanalyzer.platonov;
+    exports com.javarush.cryptanalyzer.platonov.applications.gui;
+    opens com.javarush.cryptanalyzer.platonov.applications.gui to javafx.fxml;
 }

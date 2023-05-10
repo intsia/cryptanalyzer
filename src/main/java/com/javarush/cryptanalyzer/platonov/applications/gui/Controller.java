@@ -1,4 +1,4 @@
-package com.javarush.cryptanalyzer.platonov;
+package com.javarush.cryptanalyzer.platonov.applications.gui;
 
 import java.net.URL;
 import java.util.ResourceBundle;
