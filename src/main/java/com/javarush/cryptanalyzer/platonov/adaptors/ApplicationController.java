@@ -1,45 +1,50 @@
 package com.javarush.cryptanalyzer.platonov.adaptors;
 
-import com.javarush.cryptanalyzer.platonov.core.domain.alphabetbuilder.constans.AlphabetsCollection;
-import com.javarush.cryptanalyzer.platonov.core.usecases.io.FileUploaderController;
-import com.javarush.cryptanalyzer.platonov.core.usecases.launcher.constants.EncryptionMachineTypes;
-import com.javarush.cryptanalyzer.platonov.core.domain.devices.interfaces.IEncryptionMachine;
-import com.javarush.cryptanalyzer.platonov.core.domain.variables.EncryptionAlphabet;
-import com.javarush.cryptanalyzer.platonov.core.domain.variables.EncryptionKey;
-import com.javarush.cryptanalyzer.platonov.core.domain.variables.EncryptionText;
-import com.javarush.cryptanalyzer.platonov.core.domain.alphabetbuilder.CustomEncryptionAlphabetCreator;
-import com.javarush.cryptanalyzer.platonov.core.usecases.launcher.EncryptionMachineCreator;
-import com.javarush.cryptanalyzer.platonov.core.usecases.launcher.EncryptionMachineLauncher;
-import com.javarush.cryptanalyzer.platonov.ports.IApplication;
+import com.javarush.cryptanalyzer.platonov.core.devices.EncryptionMachineCreator;
+import com.javarush.cryptanalyzer.platonov.core.constants.AlphabetsCollection;
+import com.javarush.cryptanalyzer.platonov.core.constants.RotorsTypes;
+import com.javarush.cryptanalyzer.platonov.core.constants.EncryptionMachineTypes;
+import com.javarush.cryptanalyzer.platonov.interfaces.IEncryptionMachine;
+import com.javarush.cryptanalyzer.platonov.core.variables.EncryptionAlphabet;
+import com.javarush.cryptanalyzer.platonov.core.variables.EncryptionKey;
+import com.javarush.cryptanalyzer.platonov.core.variables.EncryptionText;
+import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
+import com.javarush.cryptanalyzer.platonov.interfaces.ITextFileUploader;
 
-import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Locale;
 
 public class ApplicationController implements IApplication
 {
-    private Locale language = new Locale("ru" ,"RU");
+    private Locale language = new Locale("ru", "RU");
     private IEncryptionMachine encryptionMachine;
-    private EncryptionAlphabet encryptionAlphabet = new EncryptionAlphabet(AlphabetsCollection.alphabetEnUpperCase);
+    private EncryptionAlphabet encryptionAlphabet = new EncryptionAlphabet(AlphabetsCollection.ALPHABET_EN_UPPER_CASE);
     private EncryptionKey encryptionKey; //TODO подумать про дефолтные значения
-    private EncryptionText encryptionText; //TODO подумать про дефольные значения
-    private FileUploader uploader = new FileUploader();
+    private EncryptionText encryptionText; //TODO подумать про дефолтные значения
+
     private String result;
 
     public ApplicationController() {}
 
     @Override
-    public void createEncryptionMachine(EncryptionMachineTypes type)
+    public String getText()
     {
-        EncryptionMachineCreator creator = new EncryptionMachineCreator(encryptionAlphabet, encryptionKey, encryptionText, language);
-        this.encryptionMachine = creator.createEncryptionMachine(type);
+        return encryptionText.getText();
     }
 
-//    @Override
-//    public void setLanguage()
-//    {
-//        Locale langauage = new Locale("ru", "RU");
-//    }
+    @Override
+    public int getTextSize()
+    {
+        return encryptionText.getText().length();
+    }
+
+
+    @Override
+    public void createEncryptionMachine(EncryptionMachineTypes type)
+    {
+        encryptionMachine = EncryptionMachineCreator.createEncryptionMachine(type, encryptionAlphabet, encryptionKey, encryptionText);
+    }
 
     @Override
     public void setEncryptionAlphabet(ArrayList<Character> encryptionAlphabet)
@@ -48,15 +53,21 @@ public class ApplicationController implements IApplication
     }
 
     @Override
-    public void setEncryptionKey()
+    public void setEncryptionKey(int key)
     {
+        encryptionKey = new EncryptionKey(key);
+    }
 
+    @Override
+    public void setEncryptionKey(String keyword)
+    {
+        encryptionKey = new EncryptionKey(keyword);
     }
 
     @Override
     public void uploadEncryptionKey(String path)
     {
-         encryptionKey = uploader.uploadKeyFile(path);
+       encryptionKey = ITextFileUploader.uploadKeyFile(path);
     }
 
     @Override
@@ -68,20 +79,60 @@ public class ApplicationController implements IApplication
     @Override
     public void uploadEncryptionText(String path)
     {
-        encryptionText = uploader.uploadTextFile(path);
+       encryptionText = ITextFileUploader.uploadTextFile(path);
     }
 
     @Override
-    public ArrayList<String> Encryption()
+    public char getRotorActiveValue(RotorsTypes type, int shift)
     {
-        EncryptionMachineLauncher encryption = new EncryptionMachineLauncher();
-        return encryption.Encrypt(encryptionMachine);
+        return encryptionMachine.getRotorActiveValue(type, shift);
     }
 
     @Override
-    public ArrayList<String> Decryption()
+    public int getRotorActivePosition(RotorsTypes type, int shift)
     {
-        EncryptionMachineLauncher decryption = new EncryptionMachineLauncher();
-        return decryption.Decrypt(encryptionMachine);
+        return encryptionMachine.getRotorActivePosition(type, shift);
+    }
+
+    @Override
+    public char getRotorValueOfIndex(RotorsTypes type, int index, int shift)
+    {
+        return encryptionMachine.getRotorValueOfIndex(type, index, shift);
+    }
+
+    @Override
+    public int getRotorIndexOfValue(RotorsTypes type, char value, int shift)
+    {
+        return encryptionMachine.getRotorIndexOfValue(type, value, shift);
+    }
+
+    @Override
+    public void turnRotorUp(RotorsTypes type)
+    {
+        encryptionMachine.turnRotorUp(type);
+    }
+
+    @Override
+    public void turnRotorDown(RotorsTypes type)
+    {
+        encryptionMachine.turnRotorDown(type);
+    }
+
+    @Override
+    public ArrayList<HashMap<Enum, Integer>> Encrypt()
+    {
+        return encryptionMachine.Encrypt();
+    }
+
+    @Override
+    public ArrayList<HashMap<Enum, Integer>> Decrypt()
+    {
+        return encryptionMachine.Decrypt();
+    }
+
+    @Override
+    public String getResult()
+    {
+        return encryptionMachine.getResult();
     }
 }

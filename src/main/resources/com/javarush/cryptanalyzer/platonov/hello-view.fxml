@@ -3,11 +3,13 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
@@ -16,30 +18,60 @@
    <bottom>
       <AnchorPane prefHeight="172.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="button" layoutX="934.0" layoutY="74.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="button" layoutX="1334.0" layoutY="3.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="169.0" text="Отправить">
+               <font>
+                  <Font size="25.0" />
+               </font></Button>
+            <TextField fx:id="userTextLine" layoutX="199.0" prefHeight="58.0" prefWidth="1135.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextField>
          </children>
       </AnchorPane>
    </bottom>
    <center>
-      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <ScrollPane fitToWidth="true" style="-fx-background-color: #F0F8FF; -fx-border-color: #B0C4DE;" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="scrollPane">
+            <VBox fx:id="scrollPane" spacing="20.0">
                <children>
-                  <TextFlow prefWidth="1000.0" style="-fx-border-color: #222020; -fx-border-radius: 5;" textAlignment="CENTER">
-                     <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Привет. Меня зовут #%$%^@*()#!\nНе парьтесь, просто мой создатель придурок и он решил, что всех роботов так зовут.Однако, тем не менее я действительно робот, хоть и не слишком талантливый по современным меркам.На самом деле, я первая программа которую написал мой создатель. Охотно принимаю ваши соболезнования по этому поводу.">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Text>
-                     </children>
-                     <VBox.margin>
-                        <Insets bottom="10.0" left="100.0" right="10.0" top="10.0" />
-                     </VBox.margin>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </TextFlow>
+                  <Pane prefHeight="0.0" />
+                  <BorderPane>
+                     <center>
+                        <TextFlow maxWidth="800.0" style="-fx-border-color: #222020; -fx-border-radius: 5; -fx-background-color: #FFFFFF;" BorderPane.alignment="TOP_LEFT">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Привет. Меня зовут #%$%^@*()#!\nНе парьтесь, просто мой создатель придурок и он решил, что всех роботов так зовут.Однако, тем не менее я действительно робот, хоть и не слишком талантливый по современным меркам.На самом деле, я первая программа которую написал мой создатель. Охотно принимаю ваши соболезнования по этому поводу.">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </TextFlow>
+                     </center>
+                     <left>
+                        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_LEFT">
+                           <children>
+                              <Circle fx:id="circleAvatar" fill="#1f93ff" radius="50.0" stroke="#82828d" strokeType="INSIDE" strokeWidth="5.0">
+                                 <VBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </Circle>
+                              <TextFlow prefHeight="200.0" prefWidth="200.0" textAlignment="CENTER">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Никита Платонов" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </TextFlow>
+                           </children>
+                        </VBox>
+                     </left>
+                  </BorderPane>
                </children>
             </VBox>
          </content>
@@ -65,29 +97,80 @@
             <Pane prefHeight="200.0" prefWidth="5.0" />
             <VBox>
                <children>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Button fx:id="buttonFirstRotorUp" mnemonicParsing="false" text="Вверх" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Text fx:id="firstRotorTopSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
                      </center>
+                     <top>
+                        <Text fx:id="firstRotorTopSymbolTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="firstRotorTopSymbolBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #800000; -fx-border-width: 5;">
+                     <center>
+                        <Text fx:id="firstRotorMainSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
+                     </center>
+                     <top>
+                        <Text fx:id="firstRotorMainSymbolTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="firstRotorMainSymbolBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
                   </BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Text fx:id="firstRotorBottomSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
                      </center>
+                     <top>
+                        <Text fx:id="firstRotorBottomSymbolTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="firstRotorBottomSymbolBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
                   </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Button fx:id="buttonFirsRotorDown" mnemonicParsing="false" text="Вниз" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                </children>
@@ -95,29 +178,80 @@
             <Pane prefHeight="200.0" prefWidth="5.0" />
             <VBox>
                <children>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Button fx:id="buttonBaseRotorUp" mnemonicParsing="false" text="Вверх" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Text fx:id="baseRotorTopSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
                      </center>
+                     <top>
+                        <Text fx:id="baseRotorTopSignTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="baseRotorTopSignBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
+                  </BorderPane>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #800000; -fx-border-width: 5;">
+                     <center>
+                        <Text fx:id="baseRotorMainSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
+                     </center>
+                     <top>
+                        <Text fx:id="baseRotorMainSignTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="baseRotorMainSignBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
                   </BorderPane>
                   <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Text fx:id="baseRotorBottomSymbol" strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="40.0" />
+                           </font></Text>
                      </center>
+                     <top>
+                        <Text fx:id="baseRotorBottomSignTop" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </top>
+                     <bottom>
+                        <Text fx:id="baseRotorBottomSignBottom" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                     </bottom>
                   </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
                      <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
-                     </center>
-                  </BorderPane>
-                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: #222020;">
-                     <center>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="A" BorderPane.alignment="CENTER" />
+                        <Button fx:id="buttonBaseRotorDown" mnemonicParsing="false" text="Вниз" BorderPane.alignment="CENTER" />
                      </center>
                   </BorderPane>
                </children>

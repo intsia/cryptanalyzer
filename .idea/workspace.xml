@@ -5,58 +5,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98565d84-0320-4bf8-85ad-160f20b2cf8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/ApplicationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/FileSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/FileUploader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/ConsoleApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/HelloQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/Quest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleStoryTeller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/SetConsoleColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/constants/ConsoleColorANSI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/constants/ResourseBundleNames.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/alphabetbuilder/CustomEncryptionAlphabetCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/alphabetbuilder/constans/AlphabetsCollection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/details/Rotor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/details/Rotors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/Caesar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/RotorMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/Vigenere.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/interfaces/IEncryptionMachine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionAlphabet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/io/FileSaverController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/io/FileUploaderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/EncryptionMachineCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/EncryptionMachineLauncher.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/constants/EncryptionMachineTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/manualcontrol/ManualControlCaesar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/manualcontrol/ManualControlVigenere.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/IApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/IEncryptionAlphabetCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/ITextFileSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/ITextFileUploader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/validators/textValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/caesar.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/caesar_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/caesar_ru_RU.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consoleapp.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consoleapp_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consoleapp_ru_RU.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consolestoryteller.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consolestoryteller_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/consolestoryteller_ru_RU.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/helloquest.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenere.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenere_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenere_ru_RU.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/Avatars.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ChatWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/constants/AlphabetsCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/constants/EncryptionMachineTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/constants/RotorsTypes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/EncryptionMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/Rotor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/Vigenere.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/io/FileUploader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/interfaces/IEncryptionMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/interfaces/ITextFileUploader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/guielements.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/guielements_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/guielements_ru_RU.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/ApplicationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/ApplicationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/FileSaver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/adaptors/FileUploader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/ConsoleApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/HelloQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/HelloQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/Quest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/alphabetbuilder/CustomEncryptionAlphabetCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/alphabetbuilder/constans/AlphabetsCollection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/details/Rotor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/details/Rotors.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/Caesar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/RotorMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/Vigenere.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/devices/interfaces/IEncryptionMachine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionAlphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/variables/EncryptionAlphabet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/variables/EncryptionKey.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/domain/variables/EncryptionText.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/variables/EncryptionText.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/io/FileSaverController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/io/FileUploaderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/EncryptionMachineCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/EncryptionMachineCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/EncryptionMachineLauncher.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/launcher/constants/EncryptionMachineTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/manualcontrol/ManualControlCaesar.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/usecases/manualcontrol/ManualControlVigenere.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/IApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/interfaces/IApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/IEncryptionAlphabetCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/ITextFileSaver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/ports/ITextFileUploader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/validators/textValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/caesar.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/caesar_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/caesar_ru_RU.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consoleapp.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consoleapp_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consoleapp_ru_RU.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/test_ru_RU.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +69,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -97,10 +102,11 @@
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov\applications\gui" />
+      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov\interfaces" />
+      <recent name="C:\Program\Projects\javarush\cryptanalyzer" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources\com\javarush\cryptanalyzer\platonov" />
-      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources\com\javarush\cryptanalyzer\platonov\gui\temp" />
-      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources\com\javarush\cryptanalyzer\platonov\cryptanalyzer\gui" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.javarush.cryptanalyzer.platonov" />
@@ -165,5 +171,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cryptanalyzer$Main.ic" NAME="Main Coverage Results" MODIFIED="1683837352498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.javarush.cryptanalyzer.platonov.applications.gui.*</FILTER>
+    </SUITE>
   </component>
 </project>
