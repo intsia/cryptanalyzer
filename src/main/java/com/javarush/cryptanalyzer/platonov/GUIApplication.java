@@ -11,12 +11,10 @@ import java.io.IOException;
 public class GUIApplication extends Application
 {
     public static FXMLLoader fxmlLoader;
-    public static Controller controller;
     @Override
     public void start(Stage stage) throws IOException
     {
         fxmlLoader = new FXMLLoader(GUIApplication.class.getResource("hello-view.fxml"));
-        controller = fxmlLoader.getController();
 
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
         stage.setTitle("Hello!");

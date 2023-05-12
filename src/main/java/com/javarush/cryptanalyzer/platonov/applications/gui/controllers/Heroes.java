@@ -1,6 +1,7 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
+import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -15,25 +16,24 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
-public abstract class Heroes
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+public class Heroes
 {
     private static FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
-
-    public final static Hero UI = new Hero("UI", Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
+    private final static String resourceBundleId = ResourceBundleList.HEROES;
+    private static ResourceBundle resourceBundle = ResourceBundle.getBundle(resourceBundleId);
+    public final static Hero UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
     public static Hero creator;
     public static Hero user;
+    public static void setLocale(Locale locale)
+    {
+        resourceBundle = ResourceBundle.getBundle(resourceBundleId, locale);
+    }
 
     public static class Hero
     {
-        public Hero(String name, Image avatar, SideOfPrintMessage sideOfPrintMessage)
-        {
-            this.name = name;
-            this.avatar = avatar;
-            this.sideOfPrintMessage = sideOfPrintMessage;
-        }
-        private static String name;
-        private static Image avatar;
-        private static SideOfPrintMessage sideOfPrintMessage;
         public enum SideOfPrintMessage
         {
             LEFT,
@@ -43,6 +43,15 @@ public abstract class Heroes
         {
             public final static Image UI_AVATAR = new Image("C:\\Program\\Projects\\javarush\\cryptanalyzer\\src\\main\\java\\com\\javarush\\cryptanalyzer\\platonov\\applications\\gui\\robot.png");
         }
+        public Hero(String name, Image avatar, SideOfPrintMessage sideOfPrintMessage)
+        {
+            this.name = name;
+            this.avatar = avatar;
+            this.sideOfPrintMessage = sideOfPrintMessage;
+        }
+        private static String name;
+        private static Image avatar;
+        private static SideOfPrintMessage sideOfPrintMessage;
 
         public static void sentMessage(String messageText)
         {

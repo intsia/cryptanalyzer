@@ -8,6 +8,7 @@ import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.ResourceBundle;
 
 public class ConsoleApp
 {

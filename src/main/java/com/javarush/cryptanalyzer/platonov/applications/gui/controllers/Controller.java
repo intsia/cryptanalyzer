@@ -1,6 +1,7 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
 
 import java.net.URL;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import com.javarush.cryptanalyzer.platonov.adaptors.CoreController;
@@ -108,6 +109,7 @@ public class Controller
 
     int i = 0;
 
+    public static Locale locale = new Locale("ru", "RU");
     @FXML
     void initialize()
     {
@@ -128,7 +130,11 @@ public class Controller
 
 
 
-        sentButton.setOnAction(actionEvent -> {Heroes.UI.sentMessage("It works!");});
+        sentButton.setOnAction(actionEvent ->
+        {
+            Heroes.Hero.sentMessage("It works!");
+            locale = new Locale("ru", "RU");
+        });
 
 
     }
@@ -142,6 +148,10 @@ public class Controller
         return sentButton;
     }
 
+    public void setLocale(Locale locale)
+    {
+        Heroes.setLocale(locale);
+    }
 
 
     public void setFirstRotorValue(int state, int shift, IApplication coreController) //TODO жуткая срань, надо с этим что-то делать
