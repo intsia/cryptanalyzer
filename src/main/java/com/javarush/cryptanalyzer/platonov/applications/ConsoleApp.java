@@ -1,7 +1,7 @@
 package com.javarush.cryptanalyzer.platonov.applications;
 
 
-import com.javarush.cryptanalyzer.platonov.adaptors.ApplicationController;
+import com.javarush.cryptanalyzer.platonov.adaptors.CoreController;
 import com.javarush.cryptanalyzer.platonov.core.constants.AlphabetsCollection;
 import com.javarush.cryptanalyzer.platonov.core.constants.EncryptionMachineTypes;
 import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
@@ -13,7 +13,7 @@ public class ConsoleApp
 {
     public static void Launch()
     {
-        IApplication controller = new ApplicationController();
+        IApplication controller = new CoreController();
         controller.setEncryptionAlphabet(AlphabetsCollection.ALPHABET_EN_UPPER_CASE);
         controller.uploadEncryptionKey("C:\\Program\\key.txt");
         controller.uploadEncryptionText("C:\\Program\\text.txt");

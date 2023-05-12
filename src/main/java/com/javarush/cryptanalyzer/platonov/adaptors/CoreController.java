@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
-public class ApplicationController implements IApplication
+public class CoreController implements IApplication
 {
     private Locale language = new Locale("ru", "RU");
     private IEncryptionMachine encryptionMachine;
@@ -25,7 +25,7 @@ public class ApplicationController implements IApplication
 
     private String result;
 
-    public ApplicationController() {}
+    public CoreController() {}
 
     @Override
     public String getText()

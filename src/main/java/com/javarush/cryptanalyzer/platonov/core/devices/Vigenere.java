@@ -25,6 +25,7 @@ public class Vigenere extends EncryptionMachine
         char[] buffer = text.getText().toCharArray();
         int shift;
         int indexOfSymbolInWork;
+        char charOfSymbolInWork;
         int step = 0;
 
         while (step < buffer.length)
@@ -32,14 +33,15 @@ public class Vigenere extends EncryptionMachine
             for (int j = 0; j < steps && step < buffer.length; j++)
             {
                 shift = keys[j];
-                indexOfSymbolInWork = alphabet.getIndexOfChar(buffer[step]);
+                charOfSymbolInWork = buffer[step];
+                indexOfSymbolInWork = baseRotor.getSymbolIndexOfValue(charOfSymbolInWork,0);
 
                 baseRotor.set(indexOfSymbolInWork);
                 firstRotor.set(indexOfSymbolInWork + shift);
 
                 HashMap<Enum, Integer> stepLog = new HashMap<>();
-                stepLog.put(RotorsTypes.BASE, indexOfSymbolInWork);
-                stepLog.put(RotorsTypes.FIRST, indexOfSymbolInWork + shift);
+                stepLog.put(RotorsTypes.BASE, baseRotor.getActiveSymbolIndex());
+                stepLog.put(RotorsTypes.FIRST, firstRotor.getActiveSymbolIndex());
                 workLog.add(stepLog);
 
                 buffer[step] = firstRotor.getActiveSymbolValue();

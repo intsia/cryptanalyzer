@@ -15,4 +15,8 @@ module com.javarush.cryptanalyzer.platonov.cryptanalyzer {
     exports com.javarush.cryptanalyzer.platonov;
     exports com.javarush.cryptanalyzer.platonov.applications.gui;
     opens com.javarush.cryptanalyzer.platonov.applications.gui to javafx.fxml;
+    exports com.javarush.cryptanalyzer.platonov.applications.gui.quest;
+    opens com.javarush.cryptanalyzer.platonov.applications.gui.quest to javafx.fxml;
+    exports com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
+    opens com.javarush.cryptanalyzer.platonov.applications.gui.controllers to javafx.fxml;
 }
