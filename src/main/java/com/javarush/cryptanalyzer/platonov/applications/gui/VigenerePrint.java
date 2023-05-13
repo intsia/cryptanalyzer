@@ -25,7 +25,7 @@ public class VigenerePrint //TODO вынесется в отдельный кв�
         GuiAppController guiController = fxmlLoader.getController();
 
         step = 0;
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent ->
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2000), actionEvent ->
         {
             HashMap<Enum, Integer> stepLog = workLog.get(step++);
             char first = coreController.getRotorValueOfIndex(RotorsTypes.BASE, stepLog.get(RotorsTypes.BASE), 0);

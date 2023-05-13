@@ -2,9 +2,11 @@ package com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
 import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
+import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -60,8 +62,14 @@ public class Heroes
 
         public void sentMessage(String messageText)
         {
+
+
             GuiAppController controller = fxmlLoader.getController();
             VBox scrollPane = controller.getScrollPane();
+
+            ScrollPane scroll = controller.getScroll();
+
+            scroll.setVvalue(scroll.getVmax());
 
             TextFlow textFlow = new TextFlow();
             textFlow.setStyle("-fx-border-color: #222020; -fx-border-radius: 5; -fx-background-color: #FFFFFF;");
@@ -106,6 +114,9 @@ public class Heroes
             }
 
             scrollPane.getChildren().add(borderPane);
+
+
+            scroll.setVvalue(2);
         }
     }
 }

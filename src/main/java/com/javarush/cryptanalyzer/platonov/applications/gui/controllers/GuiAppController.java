@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
 import com.javarush.cryptanalyzer.platonov.adaptors.CoreController;
+import com.javarush.cryptanalyzer.platonov.applications.gui.VigenerePrint;
 import com.javarush.cryptanalyzer.platonov.applications.gui.quest.HelloQuest;
 import com.javarush.cryptanalyzer.platonov.applications.gui.quest.Quest;
 import com.javarush.cryptanalyzer.platonov.core.constants.AlphabetsCollection;
@@ -16,7 +17,7 @@ import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -74,6 +75,8 @@ public class GuiAppController
 
     @FXML
     private VBox buttonPane;
+    @FXML
+    private ScrollPane scroll;
 
     @FXML
     private Circle circleAvatar;
@@ -136,7 +139,8 @@ public class GuiAppController
 //        setLocale(localeEN);
 //        setLocale(localeRU);
         HelloQuest helloQuest = new HelloQuest();
-        helloQuest.launchQuest();
+        //helloQuest.launchQuest();
+        VigenerePrint.launch(coreController.Decrypt(), coreController);
     }
 
     public void cleanButtonPane()
@@ -177,6 +181,11 @@ public class GuiAppController
     public VBox getScrollPane()
     {
         return scrollPane;
+    }
+
+    public ScrollPane getScroll()
+    {
+        return scroll;
     }
 
 

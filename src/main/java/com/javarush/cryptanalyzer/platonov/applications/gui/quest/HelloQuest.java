@@ -6,6 +6,7 @@ import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
@@ -79,9 +80,11 @@ public class HelloQuest extends Quest
         autor.add(Heroes.UI);
 
         step = 0;
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent ->
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), actionEvent ->
         {
             autor.get(step).sentMessage(messages.get(step));
+            ScrollPane scroll = guiAppController.getScroll();
+            scroll.setVvalue(scroll.getVmax());
             step++;
         }));
         timeline.setCycleCount(messages.size());
@@ -102,6 +105,9 @@ public class HelloQuest extends Quest
             guiAppController.cleanButtonPane();
             Heroes.USER.sentMessage(allowedAnswers[0]);
 
+
+            ScrollPane scroll = guiAppController.getScroll();
+            scroll.setVvalue(scroll.getVmax());
         });
     }
 }
