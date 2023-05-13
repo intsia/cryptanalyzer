@@ -44,6 +44,5 @@ public class VigenerePrint //TODO вынесется в отдельный кв�
         {
             Heroes.UI.sentMessage(coreController.getResult());
         });
-
     }
 }

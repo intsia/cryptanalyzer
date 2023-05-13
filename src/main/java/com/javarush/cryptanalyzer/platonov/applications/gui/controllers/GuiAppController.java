@@ -116,16 +116,18 @@ public class GuiAppController
 
     int i = 0;
 
-    public static Locale locale = new Locale("ru", "RU");
+//    public static Locale locale = new Locale("ru", "RU");
     public static GuiAppController guiAppController;
     public static FXMLLoader fxmlLoader;
+
+    public IApplication coreController;
     @FXML
     void initialize()
     {
         fxmlLoader = GUIApplication.fxmlLoader;
         guiAppController = fxmlLoader.getController();
 
-        IApplication coreController = new CoreController();
+        coreController = new CoreController();
         coreController.setEncryptionAlphabet(AlphabetsCollection.ALPHABET_EN_UPPER_CASE);
         coreController.uploadEncryptionKey("C:\\Program\\key.txt");
         coreController.uploadEncryptionText("C:\\Program\\text.txt");
@@ -135,12 +137,13 @@ public class GuiAppController
         Locale localeEN = new Locale("en", "US");
         Locale localeRU = new Locale("ru", "RU");
 
+        setLocale(localeEN);
 
-//        setLocale(localeEN);
-//        setLocale(localeRU);
+
         HelloQuest helloQuest = new HelloQuest();
-        //helloQuest.launchQuest();
-        VigenerePrint.launch(coreController.Decrypt(), coreController);
+        helloQuest.launchQuest();
+
+        //VigenerePrint.launch(coreController.Decrypt(), coreController);
     }
 
     public void cleanButtonPane()
@@ -191,6 +194,7 @@ public class GuiAppController
 
     public void setLocale(Locale locale)
     {
+//        GuiAppController.locale = locale;
         Heroes.setLocale(locale);
         Quest.setLocale(locale);
     }

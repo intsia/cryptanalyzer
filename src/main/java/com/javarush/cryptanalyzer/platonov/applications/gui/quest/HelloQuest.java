@@ -1,6 +1,7 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui.quest;
 
 import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
+import com.javarush.cryptanalyzer.platonov.applications.gui.VigenerePrint;
 import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Heroes;
 import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.animation.KeyFrame;
@@ -23,10 +24,9 @@ public class HelloQuest extends Quest
     }
 
     @Override
-    protected void setResourceBundle()
+    protected void setResourceBundleID()
     {
         RESOURCE_BUNDLE_ID = ResourceBundleList.HELLO_QUEST;
-        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
     }
 
     @Override
@@ -83,8 +83,6 @@ public class HelloQuest extends Quest
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), actionEvent ->
         {
             autor.get(step).sentMessage(messages.get(step));
-            ScrollPane scroll = guiAppController.getScroll();
-            scroll.setVvalue(scroll.getVmax());
             step++;
         }));
         timeline.setCycleCount(messages.size());
@@ -105,9 +103,8 @@ public class HelloQuest extends Quest
             guiAppController.cleanButtonPane();
             Heroes.USER.sentMessage(allowedAnswers[0]);
 
-
-            ScrollPane scroll = guiAppController.getScroll();
-            scroll.setVvalue(scroll.getVmax());
+            VigenereQuest vigenereQuest = new VigenereQuest();
+            vigenereQuest.launchQuest();
         });
     }
 }

@@ -5,16 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98565d84-0320-4bf8-85ad-160f20b2cf8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/VigenereQuest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest_ru_RU.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/GuiAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/GuiAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Hero.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/HelloQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/HelloQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guielements.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guielements.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guielements_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guielements_en_US.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/guielements_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/guielements_ru_RU.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

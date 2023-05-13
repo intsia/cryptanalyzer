@@ -31,8 +31,10 @@ public class Heroes
 
     public static void setLocale(Locale locale)
     {
-        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
-
+        Heroes.resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
+        UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
+        CREATOR = new Hero(resourceBundle.getString("CREATOR_NAME"), Hero.Avatars.CREATOR_AVATAR, Hero.SideOfPrintMessage.RIGHT);
+        USER = new Hero("Anonymous", Hero.Avatars.USER_AVATAR, Hero.SideOfPrintMessage.RIGHT);
     }
 
     public static class Hero
@@ -116,7 +118,9 @@ public class Heroes
             scrollPane.getChildren().add(borderPane);
 
 
-            scroll.setVvalue(2);
+
+            scroll.layout();
+            scroll.setVvalue(1);
         }
     }
 }

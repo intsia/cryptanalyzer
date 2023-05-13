@@ -11,12 +11,12 @@ import java.util.ResourceBundle;
 
 public abstract class Quest
 {
-    protected FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
-    protected GuiAppController guiAppController = fxmlLoader.getController();
-    protected static Locale locale = new Locale("ru", "RU"); //TODO возможно можно сделать приватным
+    protected static FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
+    protected static GuiAppController guiAppController = fxmlLoader.getController();
+    protected static Locale locale; //TODO возможно можно сделать приватным
 
     protected static final String RESOURCE_BUNDLE_CONTROLLER_ID = ResourceBundleList.QUEST_CONTROLLER;
-    protected static ResourceBundle controllerResourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_CONTROLLER_ID, locale);
+    protected static ResourceBundle controllerResourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_CONTROLLER_ID);
 
     protected String RESOURCE_BUNDLE_ID;
     protected ResourceBundle resourceBundle;
@@ -25,24 +25,17 @@ public abstract class Quest
     protected int step;
     public Quest ()
     {
-        setResourceBundle();
+//        locale = GuiAppController.locale;
+        setResourceBundleID();
         setAllowedAnswers();
-
-//        if(checkAnswer())
-//        {
-//            launchQuest();
-//        }
-//        else
-//        {
-//            tryAgain();
-//        }
+        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
     }
     protected abstract void launchQuest();
-    protected abstract void setResourceBundle();
+    protected abstract void setResourceBundleID();
     protected abstract void setAllowedAnswers();
-    public static void setLocale(Locale locale)
+    public static void setLocale(Locale newLocale)
     {
-        Quest.locale = locale;
+        Quest.locale = newLocale;
         controllerResourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_CONTROLLER_ID, locale);
     }
 
