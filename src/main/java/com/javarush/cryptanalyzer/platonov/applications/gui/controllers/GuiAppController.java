@@ -1,26 +1,31 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+import com.javarush.cryptanalyzer.platonov.GUIApplication;
 import com.javarush.cryptanalyzer.platonov.adaptors.CoreController;
+import com.javarush.cryptanalyzer.platonov.applications.gui.quest.HelloQuest;
 import com.javarush.cryptanalyzer.platonov.applications.gui.quest.Quest;
 import com.javarush.cryptanalyzer.platonov.core.constants.AlphabetsCollection;
 import com.javarush.cryptanalyzer.platonov.core.constants.RotorsTypes;
 import com.javarush.cryptanalyzer.platonov.core.constants.EncryptionMachineTypes;
 import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Circle;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class Controller
+public class GuiAppController
 {
-    public ResourceBundle bundle = ResourceBundle.getBundle("guielements");
-
 
     @FXML
     private ResourceBundle resources;
@@ -56,9 +61,6 @@ public class Controller
     private Text baseRotorTopSymbol;
 
     @FXML
-    private Button sentButton;
-
-    @FXML
     private Button buttonBaseRotorDown;
 
     @FXML
@@ -69,6 +71,9 @@ public class Controller
 
     @FXML
     private Button buttonFirstRotorUp;
+
+    @FXML
+    private VBox buttonPane;
 
     @FXML
     private Circle circleAvatar;
@@ -103,16 +108,19 @@ public class Controller
     @FXML
     private VBox scrollPane;
 
-    @FXML
-    private TextField userTextLine;
+    public ResourceBundle bundle = ResourceBundle.getBundle("guielements");
 
 
     int i = 0;
 
     public static Locale locale = new Locale("ru", "RU");
+    public static GuiAppController guiAppController;
+    public static FXMLLoader fxmlLoader;
     @FXML
     void initialize()
     {
+        fxmlLoader = GUIApplication.fxmlLoader;
+        guiAppController = fxmlLoader.getController();
 
         IApplication coreController = new CoreController();
         coreController.setEncryptionAlphabet(AlphabetsCollection.ALPHABET_EN_UPPER_CASE);
@@ -121,36 +129,61 @@ public class Controller
 
         coreController.createEncryptionMachine(EncryptionMachineTypes.VIGENERE);
 
-        //ArrayList<HashMap<Enum, Integer>> workLog = coreController.Decrypt();
-        //VigenerePrint.launch(workLog, coreController);
-
-        String[] allowedValues = {"qwerty", "honest"};
+        Locale localeEN = new Locale("en", "US");
+        Locale localeRU = new Locale("ru", "RU");
 
 
+//        setLocale(localeEN);
+//        setLocale(localeRU);
+        HelloQuest helloQuest = new HelloQuest();
+        helloQuest.launchQuest();
+    }
 
+    public void cleanButtonPane()
+    {
+        buttonPane.getChildren().clear();
+    }
+    public ArrayList<Button> createButtons(String[] answers)
+    {
+        Pane pane = new Pane();
+        pane.setPrefHeight(0);
+        buttonPane.getChildren().add(pane);
 
+        ArrayList<Button> result = new ArrayList<>();
 
-        sentButton.setOnAction(actionEvent ->
+        for (String str : answers)
         {
-            Heroes.Hero.sentMessage("It works!");
-            locale = new Locale("ru", "RU");
-        });
+            result.add(createButton(str));
+        }
 
+        return result;
+    }
+    public Button createButton(String text)
+    {
+        BorderPane borderPane = new BorderPane();
+        Button button = new Button();
+        Font font = new Font(24);
 
+        button.setPrefWidth(400);
+        button.setFont(font);
+        button.setText(text);
+
+        borderPane.setCenter(button);
+        buttonPane.getChildren().add(borderPane);
+
+        return button;
     }
 
     public VBox getScrollPane()
     {
         return scrollPane;
     }
-    public Button getSentButton()
-    {
-        return sentButton;
-    }
+
 
     public void setLocale(Locale locale)
     {
         Heroes.setLocale(locale);
+        Quest.setLocale(locale);
     }
 
 

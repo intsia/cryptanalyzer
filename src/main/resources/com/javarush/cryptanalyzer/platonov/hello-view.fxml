@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -14,22 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Controller">
-   <bottom>
-      <AnchorPane prefHeight="172.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="sentButton" layoutX="1334.0" layoutY="3.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="169.0" text="Отправить">
-               <font>
-                  <Font size="25.0" />
-               </font></Button>
-            <TextField fx:id="userTextLine" layoutX="199.0" prefHeight="58.0" prefWidth="1135.0">
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </TextField>
-         </children>
-      </AnchorPane>
-   </bottom>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javarush.cryptanalyzer.platonov.applications.gui.controllers.GuiAppController">
    <center>
       <ScrollPane fitToWidth="true" style="-fx-background-color: #F0F8FF; -fx-border-color: #B0C4DE;" BorderPane.alignment="CENTER">
          <content>
@@ -275,4 +259,17 @@
          </children>
       </VBox>
    </left>
+   <bottom>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="415.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox fx:id="buttonPane" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </bottom>
 </BorderPane>

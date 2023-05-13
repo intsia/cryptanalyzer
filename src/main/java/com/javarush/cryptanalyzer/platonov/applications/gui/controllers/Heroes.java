@@ -21,27 +21,32 @@ import java.util.ResourceBundle;
 
 public class Heroes
 {
-    private static FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
-    private final static String resourceBundleId = ResourceBundleList.HEROES;
-    private static ResourceBundle resourceBundle = ResourceBundle.getBundle(resourceBundleId);
-    public final static Hero UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
-    public static Hero creator;
-    public static Hero user;
+    private final static String RESOURCE_BUNDLE_ID = ResourceBundleList.HEROES;
+    private static ResourceBundle resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID);
+    public static Hero UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
+    public static Hero CREATOR = new Hero(resourceBundle.getString("CREATOR_NAME"), Hero.Avatars.CREATOR_AVATAR, Hero.SideOfPrintMessage.RIGHT);
+    public static Hero USER = new Hero("Anonymous", Hero.Avatars.USER_AVATAR, Hero.SideOfPrintMessage.RIGHT);
+
     public static void setLocale(Locale locale)
     {
-        resourceBundle = ResourceBundle.getBundle(resourceBundleId, locale);
+        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
+
     }
 
     public static class Hero
     {
+        private static FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
         public enum SideOfPrintMessage
         {
             LEFT,
             RIGHT
         }
-        public abstract static class Avatars
+        public static class Avatars
         {
-            public final static Image UI_AVATAR = new Image("C:\\Program\\Projects\\javarush\\cryptanalyzer\\src\\main\\java\\com\\javarush\\cryptanalyzer\\platonov\\applications\\gui\\robot.png");
+            public final static Image UI_AVATAR = new Image("C:\\Program\\Projects\\javarush\\cryptanalyzer\\src\\main\\java\\com\\javarush\\cryptanalyzer\\platonov\\applications\\gui\\images\\robot.png");
+            public final static Image CREATOR_AVATAR = new Image("C:\\Program\\Projects\\javarush\\cryptanalyzer\\src\\main\\java\\com\\javarush\\cryptanalyzer\\platonov\\applications\\gui\\images\\creator.png");
+            public final static Image USER_AVATAR = new Image("C:\\Program\\Projects\\javarush\\cryptanalyzer\\src\\main\\java\\com\\javarush\\cryptanalyzer\\platonov\\applications\\gui\\images\\anonymous.png");
+
         }
         public Hero(String name, Image avatar, SideOfPrintMessage sideOfPrintMessage)
         {
@@ -49,13 +54,13 @@ public class Heroes
             this.avatar = avatar;
             this.sideOfPrintMessage = sideOfPrintMessage;
         }
-        private static String name;
-        private static Image avatar;
-        private static SideOfPrintMessage sideOfPrintMessage;
+        private String name;
+        private Image avatar;
+        private SideOfPrintMessage sideOfPrintMessage;
 
-        public static void sentMessage(String messageText)
+        public void sentMessage(String messageText)
         {
-            Controller controller = fxmlLoader.getController();
+            GuiAppController controller = fxmlLoader.getController();
             VBox scrollPane = controller.getScrollPane();
 
             TextFlow textFlow = new TextFlow();

@@ -5,16 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98565d84-0320-4bf8-85ad-160f20b2cf8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/LocaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/heroes.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/heroes_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/heroes_ru_RU.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Hero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/QuestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/HelloQuest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/questcontroller.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/questcontroller_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/questcontroller_ru_RU.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/GUIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/GUIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/ConsoleApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/ConsoleApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleStoryTeller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleStoryTeller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/ConsoleValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/HelloQuest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/console/Quest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/console/constants/ResourseBundleNames.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/GuiAppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/robot.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/images/robot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consolestoryteller.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consolestoryteller_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/consolestoryteller_ru_RU.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/heroes.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/heroes.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/heroes_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/heroes_en_US.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/heroes_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/heroes_ru_RU.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test_ru_RU.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vigenere.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vigenere_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/vigenere_ru_RU.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,8 +50,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -57,11 +82,11 @@
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov\applications\gui\images" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov\applications\gui" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov\interfaces" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer" />
-      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources\com\javarush\cryptanalyzer\platonov" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.javarush.cryptanalyzer.platonov" />
@@ -86,7 +111,7 @@
       <module name="cryptanalyzer" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.javarush.cryptanalyzer.platonov.applications.gui.quest.*" />
+          <option name="PATTERN" value="com.javarush.cryptanalyzer.platonov.applications.gui.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>

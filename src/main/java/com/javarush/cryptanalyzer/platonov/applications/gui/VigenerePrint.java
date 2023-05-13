@@ -1,7 +1,7 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
-import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Controller;
+import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.GuiAppController;
 import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Heroes;
 
 import com.javarush.cryptanalyzer.platonov.core.constants.RotorsTypes;
@@ -14,7 +14,7 @@ import javafx.util.Duration;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class VigenerePrint
+public class VigenerePrint //TODO вынесется в отдельный квест
 {
     private static FXMLLoader fxmlLoader = GUIApplication.fxmlLoader;
     private static int step;
@@ -22,7 +22,7 @@ public class VigenerePrint
     {
         String name = "Encryption Bot";
 
-        Controller guiController = fxmlLoader.getController();
+        GuiAppController guiController = fxmlLoader.getController();
 
         step = 0;
         Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent ->

@@ -1,6 +1,5 @@
 package com.javarush.cryptanalyzer.platonov;
 
-import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Controller;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
