@@ -19,6 +19,8 @@ public class GUIApplication extends Application
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+
+
     }
 
 

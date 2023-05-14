@@ -5,18 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="98565d84-0320-4bf8-85ad-160f20b2cf8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/VigenereQuest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest_en_US.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vigenerequest_ru_RU.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/LanguageQuest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/images/anonymous.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/images/creator.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/images/robot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/languagequest.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/languagequest_en_US.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/languagequest_ru_RU.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/GUIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/GUIApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/ConsoleApp.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/ResourceBundleList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/VigenerePrint.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/GuiAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/GuiAppController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/Heroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/QuestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/controllers/UserInputLine.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/HelloQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/HelloQuest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/Quest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/javarush/cryptanalyzer/platonov/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/VigenereQuest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/applications/gui/quest/VigenereQuest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/EncryptionMachineCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/javarush/cryptanalyzer/platonov/core/devices/EncryptionMachineCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_en_US.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/helloquest_ru_RU.properties" afterDir="false" />
@@ -47,17 +55,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program/Projects/javarush/cryptanalyzer/src/main/resources&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Program/Projects/javarush/cryptanalyzer/src/main/resources/com/javarush/cryptanalyzer/platonov",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources\com\javarush\cryptanalyzer\platonov" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\resources" />
       <recent name="C:\Program\Projects\javarush\cryptanalyzer\src\main\java\com\javarush\cryptanalyzer\platonov" />
     </key>

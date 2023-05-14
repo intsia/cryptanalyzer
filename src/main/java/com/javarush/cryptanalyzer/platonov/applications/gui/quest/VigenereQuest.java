@@ -17,14 +17,13 @@ public class VigenereQuest extends Quest
     @Override
     protected void launchQuest()
     {
-        String name = "Encryption Bot";
 
         GuiAppController guiController = fxmlLoader.getController();
 
         ArrayList<HashMap<Enum, Integer>> workLog = guiController.coreController.Decrypt();
 
         step = 0;
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(2000), actionEvent ->
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(1000), actionEvent ->
         {
             HashMap<Enum, Integer> stepLog = workLog.get(step++);
             char first = guiController.coreController.getRotorValueOfIndex(RotorsTypes.BASE, stepLog.get(RotorsTypes.BASE), 0);
@@ -34,14 +33,14 @@ public class VigenereQuest extends Quest
             guiController.setFirstRotorValue( stepLog.get(RotorsTypes.FIRST), shift, guiController.coreController);
             guiController.setBaseRotorValue(stepLog.get(RotorsTypes.BASE),guiController.coreController);
 
-            Heroes.UI.sentMessage( "Заменяю символ " + "'" + first + "'" + " на символ " + "'" + second + "'");
+            Heroes.UI.sendMessage( resourceBundle.getString("REPLACE") + "'" + first + "'" + resourceBundle.getString("WITH") + "'" + second + "'");
         }));
         timeline.setCycleCount(guiController.coreController.getTextSize());
         timeline.play();
 
         timeline.setOnFinished(actionEvent ->
         {
-            Heroes.UI.sentMessage(guiController.coreController.getResult());
+            Heroes.UI.sendMessage(guiController.coreController.getResult());
         });
     }
 

@@ -5,7 +5,9 @@ import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
 import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.GuiAppController;
 import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Heroes;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 
+import java.util.ArrayList;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -22,6 +24,7 @@ public abstract class Quest
     protected ResourceBundle resourceBundle;
     protected String userAnswer;
     protected String[] allowedAnswers;
+    protected ArrayList<Button> buttons;
     protected int step;
     public Quest ()
     {
@@ -59,6 +62,6 @@ public abstract class Quest
             result.append("\n- " + answer);
         }
 
-        Heroes.UI.sentMessage(result.toString());
+        Heroes.UI.sendMessage(result.toString());
     }
 }

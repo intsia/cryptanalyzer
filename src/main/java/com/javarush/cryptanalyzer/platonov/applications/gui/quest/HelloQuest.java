@@ -1,19 +1,13 @@
 package com.javarush.cryptanalyzer.platonov.applications.gui.quest;
 
 import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
-import com.javarush.cryptanalyzer.platonov.applications.gui.VigenerePrint;
 import com.javarush.cryptanalyzer.platonov.applications.gui.controllers.Heroes;
-import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextField;
 import javafx.util.Duration;
 
 import java.util.ArrayList;
-import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class HelloQuest extends Quest
 {
@@ -32,25 +26,26 @@ public class HelloQuest extends Quest
     @Override
     protected void setAllowedAnswers()
     {
-        allowedAnswers = new String[] {"QWERTY"};
+
     }
 
     @Override
     public void launchQuest()
     {
-        Heroes.UI.sentMessage(resourceBundle.getString("HELLO"));
+        Heroes.UI.sendMessage(resourceBundle.getString("HELLO"));
         allowedAnswers = new String[]{resourceBundle.getString("MY_CONDOLENCES")};
         ArrayList<Button> buttons = guiAppController.createButtons(allowedAnswers);
         Button condolences = buttons.get(0);
         condolences.setOnAction(actionEvent ->
         {
             guiAppController.cleanButtonPane();
-            Heroes.USER.sentMessage(allowedAnswers[0]);
+            Heroes.USER.sendMessage(allowedAnswers[0]);
             helloQuestPartTwo();
         });
 
 
     }
+
     private void helloQuestPartTwo()
     {
         ArrayList<String> messages = new ArrayList<>();
@@ -79,29 +74,31 @@ public class HelloQuest extends Quest
         messages.add(resourceBundle.getString("ROBOT_ZERO_LAW"));
         autor.add(Heroes.UI);
 
+        allowedAnswers = new String[]{resourceBundle.getString("NEXT")};
+        buttons = guiAppController.createButtons(allowedAnswers);
+        Button next = buttons.get(0);
         step = 0;
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), actionEvent ->
+        next.setOnAction(actionEvent ->
         {
-            autor.get(step).sentMessage(messages.get(step));
+            autor.get(step).sendMessage(messages.get(step));
             step++;
-        }));
-        timeline.setCycleCount(messages.size());
-        timeline.play();
-
-        timeline.setOnFinished(actionEvent ->
-        {
-            helloQuestPartThree();
+            if (step == messages.size())
+            {
+                guiAppController.cleanButtonPane();
+                helloQuestPartThree();
+            }
         });
     }
+
     private void helloQuestPartThree()
     {
         allowedAnswers = new String[]{resourceBundle.getString("I_PROMISE")};
-        ArrayList<Button> buttons = guiAppController.createButtons(allowedAnswers);
+        buttons = guiAppController.createButtons(allowedAnswers);
         Button promise = buttons.get(0);
         promise.setOnAction(actionEvent ->
         {
             guiAppController.cleanButtonPane();
-            Heroes.USER.sentMessage(allowedAnswers[0]);
+            Heroes.USER.sendMessage(allowedAnswers[0]);
 
             VigenereQuest vigenereQuest = new VigenereQuest();
             vigenereQuest.launchQuest();

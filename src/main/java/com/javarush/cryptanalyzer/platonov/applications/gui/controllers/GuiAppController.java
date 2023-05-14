@@ -7,12 +7,11 @@ import java.util.ResourceBundle;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
 import com.javarush.cryptanalyzer.platonov.adaptors.CoreController;
-import com.javarush.cryptanalyzer.platonov.applications.gui.VigenerePrint;
-import com.javarush.cryptanalyzer.platonov.applications.gui.quest.HelloQuest;
+import com.javarush.cryptanalyzer.platonov.applications.gui.quest.LanguageQuest;
 import com.javarush.cryptanalyzer.platonov.applications.gui.quest.Quest;
 import com.javarush.cryptanalyzer.platonov.core.constants.AlphabetsCollection;
-import com.javarush.cryptanalyzer.platonov.core.constants.RotorsTypes;
 import com.javarush.cryptanalyzer.platonov.core.constants.EncryptionMachineTypes;
+import com.javarush.cryptanalyzer.platonov.core.constants.RotorsTypes;
 import com.javarush.cryptanalyzer.platonov.interfaces.IApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -131,19 +130,25 @@ public class GuiAppController
         coreController.setEncryptionAlphabet(AlphabetsCollection.ALPHABET_EN_UPPER_CASE);
         coreController.uploadEncryptionKey("C:\\Program\\key.txt");
         coreController.uploadEncryptionText("C:\\Program\\text.txt");
-
         coreController.createEncryptionMachine(EncryptionMachineTypes.VIGENERE);
+
+
 
         Locale localeEN = new Locale("en", "US");
         Locale localeRU = new Locale("ru", "RU");
 
         setLocale(localeEN);
 
+        LanguageQuest start = new LanguageQuest();
+        start.launchQuest();
 
-        HelloQuest helloQuest = new HelloQuest();
-        helloQuest.launchQuest();
+//        button.setOnAction(actionEvent ->
+//        {
+////            FileChooser fileChooser = new FileChooser();
+////            Path path = fileChooser.showOpenDialog(new Stage()).toPath();
+////            coreController.uploadEncryptionText(String.valueOf(path));
+////            coreController.createEncryptionMachine(EncryptionMachineTypes.VIGENERE);
 
-        //VigenerePrint.launch(coreController.Decrypt(), coreController);
     }
 
     public void cleanButtonPane()

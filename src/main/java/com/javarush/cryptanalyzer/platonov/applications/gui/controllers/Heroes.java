@@ -2,7 +2,6 @@ package com.javarush.cryptanalyzer.platonov.applications.gui.controllers;
 
 import com.javarush.cryptanalyzer.platonov.GUIApplication;
 import com.javarush.cryptanalyzer.platonov.applications.gui.ResourceBundleList;
-import javafx.beans.property.DoubleProperty;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -25,13 +24,14 @@ public class Heroes
 {
     private final static String RESOURCE_BUNDLE_ID = ResourceBundleList.HEROES;
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID);
+
     public static Hero UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
     public static Hero CREATOR = new Hero(resourceBundle.getString("CREATOR_NAME"), Hero.Avatars.CREATOR_AVATAR, Hero.SideOfPrintMessage.RIGHT);
     public static Hero USER = new Hero("Anonymous", Hero.Avatars.USER_AVATAR, Hero.SideOfPrintMessage.RIGHT);
 
     public static void setLocale(Locale locale)
     {
-        Heroes.resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
+        resourceBundle = ResourceBundle.getBundle(RESOURCE_BUNDLE_ID, locale);
         UI = new Hero(resourceBundle.getString("UI_NAME"), Hero.Avatars.UI_AVATAR, Hero.SideOfPrintMessage.LEFT);
         CREATOR = new Hero(resourceBundle.getString("CREATOR_NAME"), Hero.Avatars.CREATOR_AVATAR, Hero.SideOfPrintMessage.RIGHT);
         USER = new Hero("Anonymous", Hero.Avatars.USER_AVATAR, Hero.SideOfPrintMessage.RIGHT);
@@ -62,10 +62,8 @@ public class Heroes
         private Image avatar;
         private SideOfPrintMessage sideOfPrintMessage;
 
-        public void sentMessage(String messageText)
+        public void sendMessage(String messageText) //TODO разбить на функции поменьше и сделать нормальный нейминг
         {
-
-
             GuiAppController controller = fxmlLoader.getController();
             VBox scrollPane = controller.getScrollPane();
 
@@ -75,6 +73,7 @@ public class Heroes
 
             TextFlow textFlow = new TextFlow();
             textFlow.setStyle("-fx-border-color: #222020; -fx-border-radius: 5; -fx-background-color: #FFFFFF;");
+            textFlow.setPrefWidth(100);
             textFlow.setMaxWidth(1000);
             Insets paddingInsens = new Insets(10, 10, 10, 10);
             textFlow.setPadding(paddingInsens);
@@ -103,7 +102,6 @@ public class Heroes
             {
                 case LEFT ->
                 {
-
                     BorderPane.setAlignment(textFlow, Pos.TOP_LEFT);
                     borderPane.setLeft(vbox);
                 }

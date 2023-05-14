@@ -7,6 +7,8 @@ import com.javarush.cryptanalyzer.platonov.core.variables.EncryptionKey;
 import com.javarush.cryptanalyzer.platonov.core.variables.EncryptionText;
 import com.javarush.cryptanalyzer.platonov.core.constants.EncryptionMachineTypes;
 
+import java.util.Optional;
+
 public abstract class EncryptionMachineCreator
 {
     public static IEncryptionMachine createEncryptionMachine(EncryptionMachineTypes type, EncryptionAlphabet encryptionAlphabet, EncryptionKey encryptionKey, EncryptionText encryptionText)
@@ -24,7 +26,7 @@ public abstract class EncryptionMachineCreator
             }
             default ->
             {
-                return null;
+                throw new IllegalArgumentException("Unknown encryption machine type" + type);
             }
         }
     }
