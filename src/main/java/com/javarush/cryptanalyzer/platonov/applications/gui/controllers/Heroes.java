@@ -17,8 +17,11 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
+import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+
+import static com.sun.javafx.scene.control.skin.Utils.getResource;
 
 public class Heroes
 {
