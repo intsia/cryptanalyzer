@@ -1,5 +1,6 @@
 package com.javarush.cryptanalyzer.platonov;
 
+import com.javarush.cryptanalyzer.platonov.gui.desktop.creators.GUILoader;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -13,16 +14,13 @@ public class GUIApplication extends Application
     @Override
     public void start(Stage stage) throws IOException
     {
-        fxmlLoader = new FXMLLoader(GUIApplication.class.getResource("hello-view.fxml"));
+        Scene scene = new Scene(GUILoader.getInstance().getControlNode());
 
-        Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
-        stage.setTitle("Hello!");
         stage.setScene(scene);
+        stage.setWidth(1920);
+        stage.setHeight(1080);
         stage.show();
-
-
     }
-
 
     public static void launchGUIApp()
     {
